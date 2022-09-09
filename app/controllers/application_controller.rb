@@ -37,7 +37,21 @@ module ChatDemo
     end
 
     # DELETE ROUTES
+    delete '/messages/:id' do
+      take_out = Message.find(params[:id])
+      take_out.destroy
+      take_out.to_json
+    end
 
     # PATCH ROUTES
+    patch '/users/:id' do
+      user = User.find(params[:id])
+      user.update(
+        name: params[:name],
+        password: params[:password]
+      )
+      user.to_json
+    end
+
   end
 end
