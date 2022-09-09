@@ -1,4 +1,5 @@
 require_relative "./config/environment"
+require './middlewares/chat_backend'
 
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
@@ -11,5 +12,7 @@ end
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
 
+use ChatDemo::ChatBackend
+
 # Our application
-run ApplicationController
+run ChatDemo::ApplicationController
