@@ -29,7 +29,7 @@ gem "sinatra-activerecord", "~> 2.0"
 gem "rake", "~> 13.0"
 
 # Provides functionality to interact with a SQLite3 database
-gem "sqlite3", "~> 1.4"
+gem "pg", "~> 1.1"
 
 # Faye’s WebSockets implementation that provides the standard WebSockets API. This allows us to build a Rack middleware that responds to WebSockets.
 gem "faye-websocket"
