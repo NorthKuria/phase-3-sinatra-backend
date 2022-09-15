@@ -1,3 +1,6 @@
+require "sinatra"
+require "sinatra/activerecord"
+
 module ChatDemo
   class ApplicationController < Sinatra::Base
     set :default_content_type, 'application/json'
