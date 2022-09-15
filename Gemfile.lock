@@ -99,7 +99,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activerecord (~> 6.1)
   database_cleaner (~> 2.0)
   faye-websocket
   pg (~> 1.1)
