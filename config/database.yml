@@ -1,20 +1,7 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  username: postgres
-  password: xxxxx #<-- which you have defiend while installing postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
 development:
-  <<: *default
-  database: project_development
-
-test:
-  <<: *default
-  database: project_test
+  adapter: sqlite3
+  database: db/development.sqlite3
 
 production:
-  <<: *default
-  database: project_production
-  username: username
-  password: <%= ENV['PROJECT_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
+  adapter: postgresql
