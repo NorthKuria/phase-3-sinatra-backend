@@ -1,5 +1,10 @@
 source "https://rubygems.org"
 
+ruby "3.0.4"
+
+gem "faye-websocket"
+gem "puma"
+
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra"
@@ -32,8 +37,6 @@ gem "rake"
 gem "require_all"
 
 gem 'uri'
-
- gem "faker"
 
 #use pry in the development phase only
 group :development do
